@@ -119,13 +119,22 @@ span.psw {
   background-color: #333; 
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: space-between;
   padding: 0 20px;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para darle profundidad */
   position: fixed; 
   top: 0;
   left: 0;
   z-index: 1000; 
+}
+.topbar-left {
+  flex: 1; /* Esto permite que el título ocupe todo el espacio disponible a la izquierda */
+}
+
+.topbar-title {
+  color: white;
+  font-size: 60px;
+  margin: 0;
 }
 
 .icon-container {

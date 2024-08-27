@@ -43,7 +43,7 @@ const Login = () => {
               />
 
               <label htmlFor="psw">
-                <b>Constraseña</b>
+                <b>Contraseña</b>
               </label>
               <input
                 type="password"
@@ -52,7 +52,7 @@ const Login = () => {
                 required
               />
               <div className="container" style={{fontStyle: "italic" , backgroundColor: "black", borderRadius: "50px", width: "45%" }}>
-                <button type="submit">Iniciar Sección</button>
+                <button type="submit">Iniciar Sesión</button>
               </div>
               <label>
                 <input
@@ -73,7 +73,7 @@ const Login = () => {
                 Cancelar
               </button>
               <span className="psw" style={{padding: "10px"}}>
-                Olvido <a href="#">su contraseña?</a>
+                 <a href="#">Olvido su contraseña?</a>
               </span>
             </div>
           </div>

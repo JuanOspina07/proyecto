@@ -4,6 +4,7 @@ import {getAuth, onAuthStateChanged} from 'firebase/auth'
 import Login from './Components/Login'
 import Home from './Components/Home'
 import TopBar from './Components/TopBar'
+import ProductList from './Components/ProductList'
 
 const auth = getAuth(appFirebase)
 
@@ -26,9 +27,13 @@ function App() {
   return (
     <div>
 
-      {/* Llama el correo del user  */}
-      {user ? <Home  correoUsuario = {user.email}/> : <Login />}
+     
       <TopBar />
+      <div className="main-content"> {/* Contenedor para el contenido principal */}
+         {/* Llama el correo del user  */}
+        {user ? <Home  correoUsuario = {user.email}/> : <Login />}
+        <ProductList/>
+      </div>
 
     </div>
   )
