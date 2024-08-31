@@ -56,7 +56,7 @@ const ProductList = () => {
                 <div className='nom'> <h3>Laura</h3></div>
                 <img src={producto5} alt="Camiseta" />
                 <div className='Orden'>
-                    <h3>$100</h3>
+                    <h3>$7</h3>
                     <button className="shadow__btn">
                     <ShoppingCartIcon/>
                     </button>

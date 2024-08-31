@@ -135,6 +135,9 @@ span.psw {
   color: white;
   font-size: 60px;
   margin: 0;
+  font-style: normal;
+  text-transform: uppercase;
+  font-family: 'emoji';
 }
 
 .icon-container {
