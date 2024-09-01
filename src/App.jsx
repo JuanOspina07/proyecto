@@ -32,7 +32,7 @@ function App() {
       <div className="main-content"> {/* Contenedor para el contenido principal */}
          {/* Llama el correo del user  */}
         {user ? <Home  correoUsuario = {user.email}/> : <Login />}
-        <ProductList/>
+        {/* <ProductList/> */}
       </div>
 
     </div>

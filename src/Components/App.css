@@ -114,31 +114,48 @@ span.psw {
 }
 
 .topbar {
-  width: 100%;
-  height: 75px;
-  background-color: #333; 
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  align-items: center; /* Asegura que los elementos se alineen verticalmente al centro */
+  justify-content: space-between; /* Espacia los elementos a los extremos de la barra */
   padding: 0 20px;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para darle profundidad */
-  position: fixed; 
+  height: 75px;
+  background-color: #000000;
+  position: fixed;
   top: 0;
-  left: 0;
-  z-index: 1000; 
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
+
 .topbar-left {
   flex: 1; /* Esto permite que el título ocupe todo el espacio disponible a la izquierda */
 }
 
 .topbar-title {
   color: white;
-  font-size: 60px;
+  font-size: 60px; /* Cambiar de 60px a 24px por ejemplo */
   margin: 0;
-  font-style: normal;
   text-transform: uppercase;
   font-family: 'emoji';
 }
+
+.topbar-title {
+  margin: 0; /* Asegúrate de que no haya márgenes innecesarios */
+  padding: 0;
+}
+
+@media (max-width: 768px) {
+  .topbar-title {
+    font-size: 18px; /* Reducir tamaño de fuente en pantallas pequeñas */
+  }
+}
+
+.topbar-title {
+  white-space: nowrap; /* Evita que el texto se rompa en varias líneas */
+  overflow: hidden;
+  text-overflow: ellipsis; /* Añade puntos suspensivos si el texto es demasiado largo */
+}
+
 
 .icon-container {
   display: flex;
@@ -153,3 +170,62 @@ button {
   background: none;
 }
 
+.list-css {
+  display: flex;
+  justify-content: flex-start; /* Alinea el dropdown a la izquierda */
+  align-items: center;         /* Centra el dropdown verticalmente */
+  margin: 0 100px;              /* Añade un margen alrededor del dropdown */
+}
+
+/* Contenedor específico para DropListProducts en TopBar */
+.container-list {
+  display: flex;
+  align-items: center;
+  margin-right: 63%; /* Empuja el dropdown hacia la izquierda */
+}
+
+.list-css .MuiFormControl-root {
+  width: 160px;               /* Ancho del dropdown */
+  background-color: #f5f5f5;  /* Color de fondo */
+  border-radius: 40px;        
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  height: 50px;
+}
+
+/* Estilo del InputLabel (la etiqueta del dropdown) */
+.list-css .MuiInputLabel-root {
+  color: #333;                /* Color del texto de la etiqueta */
+}
+
+/* Estilo del Select (el menú desplegable) */
+.list-css .MuiSelect-root {
+  color: #000;                /* Color del texto seleccionado */
+  padding: 10px;              /* Espaciado interno */
+}
+
+/* Estilo de las opciones del menú */
+.list-css .MuiMenuItem-root {
+  color: #555;                /* Color del texto de las opciones */
+}
+
+.list-css .MuiMenuItem-root:hover {
+  background-color: #e0e0e0;  /* Color de fondo al pasar el mouse */
+}
+
+/* Cambiar el color de fondo del dropdown cuando está abierto */
+.list-css .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+  border-color: #484b4e;      /* Cambia el color del borde cuando está enfocado */
+}
+
+/* Cambiar el color del texto de la etiqueta cuando está enfocado */
+.list-css .MuiInputLabel-root.Mui-focused {
+  color: #333; /* Cambia el color del texto de la etiqueta cuando está enfocado */
+}
+
+/* Estilo adicional para TopBar */
+.icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* Mantén los otros iconos a la derecha */
+  width: 100%;
+}
